@@ -60,6 +60,20 @@ int main()
      Rectangle r3=r2;   // Copy Constructor
      
      cout<<r3.length<<" "<<r3.width<<endl;
+     
+     
+     
+     
+     Rectangle *r4=new Rectangle();   // Manual creation of class
+     
+     r4->length=90;
+     r4->width=70;
+     
+     cout<<r4->length<<" "<<r4->width<<endl;
+     
+    
+    // The Destructor will not affect r4 until we are deleting it manually
+    delete r4;
   
 
     return 0;
