@@ -1,29 +1,66 @@
-// C++ program to explain destructors
+
+
 #include <bits/stdc++.h>
 using namespace std;
-class Geeks
-{
-    public:
-    int id;
+
+
+class Rectangle{
+  
+  public:
       
-    //Definition for Destructor
-    ~Geeks()
-    {
-        cout << "Destructor called for id: " << id <<endl; 
-    }
+      int length;
+      int width;
+      
+      Rectangle()   // Normal constructor
+      {
+         length=0;
+         width=0;
+      }
+      
+      
+      
+      Rectangle(int l,int w)    // Parameterised constructor
+      {
+          length=l;
+          width=w;
+      }
+      
+      
+      
+      Rectangle(Rectangle &r)   // Copy Constructor
+      {
+          length=r.length;
+          width=r.width;
+      }
+    
+    
+    
+      ~ Rectangle()
+      {
+          cout<<"Destructor function is called"<<endl;
+      }
+    
 };
+
+
+int main()
+{
+   
+     Rectangle r1;   // Normal Constructor
+     
+     cout<<r1.length<<" "<<r1.width<<endl;
+     
+     
+     Rectangle r2(100,50);   // Parameterised Constructor
+     
+     cout<<r2.length<<" "<<r2.width<<endl;
+     
+     
+     
+     Rectangle r3=r2;   // Copy Constructor
+     
+     cout<<r3.length<<" "<<r3.width<<endl;
   
-int main() 
-  {
-    Geeks obj1;
-    obj1.id=7;
-    int i = 0;
-    while ( i < 5 )
-    {
-        Geeks obj2;
-        obj2.id=i;
-        i++;        
-    } // Scope for obj2 ends here
-  
+
     return 0;
-  } // Scope for obj1 ends here
+}
