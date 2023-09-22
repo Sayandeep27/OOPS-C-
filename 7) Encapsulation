@@ -1,0 +1,39 @@
+
+
+#include <bits/stdc++.h>
+using namespace std;
+
+
+
+class ABC{
+  
+  int x;
+  
+  
+  
+  public:
+  
+   void set(int val)
+   {
+       x=val;
+   }
+   
+   
+   int get()
+   {
+       return x;
+   }
+    
+    
+};
+
+
+int main()
+{
+    
+    ABC obj1;
+    obj1.set(10);   // here we can not do like this -  obj1.x=10; as x is private
+    cout<<obj1.get()<<endl;
+   
+    return 0;
+}
