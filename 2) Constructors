@@ -1,33 +1,60 @@
-// C++ program to demonstrate constructors
+
+
 #include <bits/stdc++.h>
 using namespace std;
-class Geeks
-{
-    public:
-    int id;
+
+
+class Rectangle{
+  
+  public:
       
-    //Default Constructor
-    Geeks()
-    {
-        cout << "Default Constructor called" << endl; 
-        id=-1;
-    }
+      int length;
+      int width;
       
-    //Parameterized Constructor
-    Geeks(int x)
-    {
-        cout <<"Parameterized Constructor called "<< endl;
-        id=x;
-    }
+      Rectangle()   // Normal constructor
+      {
+         length=0;
+         width=0;
+      }
+      
+      
+      
+      Rectangle(int l,int w)    // Parameterised constructor
+      {
+          length=l;
+          width=w;
+      }
+      
+      
+      
+      Rectangle(Rectangle &r)   // Copy Constructor
+      {
+          length=r.length;
+          width=r.width;
+      }
+    
+    
 };
-int main() {
-      
-    // obj1 will call Default Constructor
-    Geeks obj1;
-    cout <<"Geek id is: "<<obj1.id << endl;
-      
-    // obj2 will call Parameterized Constructor
-    Geeks obj2(21);
-    cout <<"Geek id is: " <<obj2.id << endl;
+
+
+int main()
+{
+   
+     Rectangle r1;   // Normal Constructor
+     
+     cout<<r1.length<<" "<<r1.width<<endl;
+     
+     
+     Rectangle r2(100,50);   // Parameterised Constructor
+     
+     cout<<r2.length<<" "<<r2.width<<endl;
+     
+     
+     
+     Rectangle r3=r2;   // Copy Constructor
+     
+     cout<<r3.length<<" "<<r3.width<<endl;
+  
+
     return 0;
 }
