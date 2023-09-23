@@ -1,0 +1,20 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int x=10;  // Global variable
+
+
+int main()
+{
+    
+    int x=50;  // Local variable
+    
+    cout<<x<<endl;  // It will print the value of local variable
+    
+    cout<<::x<<endl;   // It will print the value of global varibale (scope resolution operator)
+    
+   
+
+    return 0;
+}
