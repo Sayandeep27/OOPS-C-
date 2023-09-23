@@ -1,0 +1,41 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class A{
+    
+    int x;
+    
+  public:
+    
+        A(int val)
+        {
+            x=val;
+        }
+
+  
+        friend void print(A &obj);   // just write the complete function name with parameters
+    
+    
+};
+
+
+
+void print(A &obj)
+{
+    cout<<obj.x<<endl;
+}
+
+
+int main()
+{
+    
+    
+    A obj(5);
+    
+   // cout<<obj.x<<endl;   - it will throw error as x is a private member
+    
+    print(obj);   // it will not throw error as print function is a friend function of class A
+
+
+    return 0;
+}
