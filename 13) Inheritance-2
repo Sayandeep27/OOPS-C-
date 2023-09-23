@@ -1,0 +1,45 @@
+
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+class Parent{
+    
+  public:
+  
+    
+    Parent()
+    {
+        cout<<"Parent class is called"<<endl;
+      
+    }
+    
+    
+};
+
+
+class child : public Parent{
+
+public: 
+
+    child()
+    {
+        cout<<"Child class is called"<<endl;
+     
+    }
+    
+    
+};
+
+
+
+
+int main()
+{
+    
+    
+    child obj2; // this will automatically call the parent class before it's execution as it is a child class
+
+    return 0;
+}
