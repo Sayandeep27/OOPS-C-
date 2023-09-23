@@ -2,7 +2,7 @@
 using namespace std;
 
 
-class Complex{     // Runtime Polymorphism
+class Complex{     // Compile time Polymorphism  (Operator Overloading)
   
   public:
   
