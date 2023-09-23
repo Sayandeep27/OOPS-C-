@@ -1,0 +1,64 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+class Parent{       // Runtime polymorphism (Function over-riding)
+  
+  public:
+  
+     virtual void print()
+     {
+         cout<<"Parent class"<<endl;
+     }
+     
+     
+     void show()
+     {
+         cout<<"Parent class"<<endl;
+     }
+    
+    
+};
+
+
+
+
+
+class Child : public Parent{
+    
+    public:
+    
+      void print()
+      {
+          cout<<"child class"<<endl;
+      }
+      
+      
+      
+      void show()
+      {
+          cout<<"child class"<<endl;
+      }
+    
+    
+};
+
+
+
+int main()
+{
+    
+    Parent *p;
+    Child c;
+    
+    
+    p=&c;
+    
+    p->print();   // this is changed because of virtual keyword (function over-riding)
+    
+    p->show();      // It has not changed
+ 
+
+
+    return 0;
+}
