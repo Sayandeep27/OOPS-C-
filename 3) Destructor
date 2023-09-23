@@ -45,7 +45,11 @@ class Rectangle{
 
 int main()
 {
-   
+
+    // After the execution of main function, destructor will be called for each of the objects created below and everyone will be deleted
+
+
+
      Rectangle r1;   // Normal Constructor
      
      cout<<r1.length<<" "<<r1.width<<endl;
