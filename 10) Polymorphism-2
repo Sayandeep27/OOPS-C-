@@ -1,0 +1,66 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+
+class Complex{     // Runtime Polymorphism
+  
+  public:
+  
+     int real;
+     int imaginary;
+     
+     
+     Complex(int x,int y)
+     {
+         real=x;
+         imaginary=y;
+     }
+     
+     
+     
+     Complex operator + (Complex &c)  // here c is c2 (right operator of operand +)
+     {
+        Complex ans(0,0);
+        
+        ans.real=real+c.real;
+        ans.imaginary=imaginary+c.imaginary;
+        
+        return ans;
+     }
+     
+     
+     
+     Complex operator * (Complex &c)  // here c is c2 (right operator of operand *)
+     {
+        Complex ans(1,1);
+        
+        ans.real=real*c.real;
+        ans.imaginary=imaginary*c.imaginary;
+        
+        return ans;
+     }
+    
+    
+};
+
+
+int main()
+{
+    Complex c1(1,2);
+    Complex c2(1,3);
+   
+   
+    Complex c3 = c1+c2;
+   
+    cout<<c3.real<<" "<<c3.imaginary<<endl;
+    
+    
+    
+    
+    Complex c4 = c1*c2;
+   
+    cout<<c4.real<<" "<<c4.imaginary<<endl;
+     
+
+    return 0;
+}
