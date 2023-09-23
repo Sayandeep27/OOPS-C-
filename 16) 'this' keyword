@@ -1,0 +1,33 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+class Person{
+  
+  public:
+  
+    string name;
+    
+    Person(string name)
+    {
+        this->name=name;   // Here 'this' refers to it's own class.  'this' is used here so that the both name will not be able to create confusion
+    }
+    
+    
+    void display()
+    {
+        cout<<name<<endl;
+    }
+    
+};
+
+int main()
+{
+  
+    Person p1("Sayandeep");
+    
+    p1.display();
+  
+  
+    return 0;
+}
