@@ -64,3 +64,63 @@ int main()
 
     return 0;
 }
+
+
+---------------------------------------------------------------------------------------------------------------
+
+
+
+
+#include <bits/stdc++.h>
+
+using namespace std;
+
+class Result{
+    
+  public:
+  
+      int ben;
+      int eng;
+      
+      Result(int b,int e)  // constructor
+      {
+          ben=b;
+          eng=e;
+      }
+      
+      
+      
+      
+      Result operator+ (Result &r)  // here r is r2 (right operator of operand '+')
+      {
+          Result ans(0,0);
+          
+          ans.ben=ben+r.ben;
+          ans.eng=eng+r.eng;
+          
+          return ans;
+      }
+      
+      
+      
+    
+    
+    
+};
+
+
+int main()
+{
+    Result r1(97,98);
+    
+    Result r2(98,96);
+    
+    
+    Result r3=r1+r2;   // operator overloading
+    
+    cout<<r3.ben<<" "<<r3.eng<<endl;
+    
+
+    return 0;
+}
+
