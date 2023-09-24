@@ -1,64 +1,60 @@
+
+
 #include <bits/stdc++.h>
+
 using namespace std;
 
-
-class Parent{       // Runtime polymorphism (Function over-riding)
-  
+class Teacher{    // Runtime polymorphism (Function over-riding)
+    
   public:
   
-     virtual void print()
+    virtual void print()
      {
-         cout<<"Parent class"<<endl;
+         cout<<"I am print fucntion from teacher class"<<endl;
      }
      
      
-     void show()
+     void display()
      {
-         cout<<"Parent class"<<endl;
+         cout<<"I am display function from teacher class"<<endl;
      }
+    
     
     
 };
 
 
-
-
-
-class Child : public Parent{
+class Student : public Teacher{
     
-    public:
+  public:
+  
+    void print()
+    {
+        cout<<"I am print function from Student class"<<endl;
+    }
     
-      void print()
-      {
-          cout<<"child class"<<endl;
-      }
-      
-      
-      
-      void show()
-      {
-          cout<<"child class"<<endl;
-      }
+    
+    void display()
+    {
+        cout<<"I am display function from Student class"<<endl;
+    }
+     
     
     
 };
-
 
 
 int main()
 {
     
-    Parent *p;
-    Child c;
+    Teacher *t;
     
+    Student s;
     
-    p=&c;
+    t=&s;
     
-    p->print();   // this is changed because of virtual keyword (function over-riding)
-    
-    p->show();      // It has not changed
+    t->print();  // this is changed because of virtual function (function over-riding)
+    t->display();   // this has not changed
  
-
-
     return 0;
 }
