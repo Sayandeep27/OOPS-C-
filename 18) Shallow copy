@@ -1,0 +1,50 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Student{
+  
+  int id;
+  char *name;  // dynamic pointer
+  
+  
+  public:
+  
+     Student(int i,char *s)
+     {
+         id=i;
+         name=s;
+     }
+     
+     
+     void display()
+     {
+         cout<<"id - "<<" "<<id<<" ";
+         cout<<"name - "<<" "<<name<<endl;
+     }
+    
+};
+
+int main()
+{
+    char name[]="TRUE ENGINEER";
+    
+    Student s1(101,name);
+    
+    s1.display();
+    
+    
+    name[3]='U';  // TRUE->TRUU
+    
+    
+    Student s2(102,name);
+    s2.display();
+    
+    
+    
+    s1.display();
+    // desired output -   101,TRUE ENGINEER
+    // actual output - 101,TRUU ENGINEER  - MEANS it is a shallow copy(both objects are pointing the same array)
+    
+
+    return 0;
+}
