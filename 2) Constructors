@@ -27,7 +27,7 @@ class Rectangle{
       
       
       
-      Rectangle(Rectangle &r)   // Copy Constructor
+      Rectangle(Rectangle &r)   // Copy Constructor   // deep copy
       {
           length=r.length;
           width=r.width;
